@@ -1,0 +1,29 @@
+#container
+{   
+    position: absolute;
+    width: 800px;
+    height:650px;
+    top: 50px;
+    left: 360px;
+    border: 2px solid lightslategrey;
+    background-color: darkcyan;
+    
+
+}
+
+#controls
+{
+    text-align: center;
+    background-color: cyan;
+}
+
+#box
+{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: antiquewhite;
+    top: 280px;
+    left: 343px;
+   
+}
