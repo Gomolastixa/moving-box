@@ -5,10 +5,22 @@
     height:650px;
     top: 50px;
     left: 360px;
-    border: 2px solid lightslategrey;
+    border: 3px solid lightslategrey;
     background-color: darkcyan;
     
 
+}
+
+.control
+{
+    padding-right: 4px;
+    margin-right: 4px;
+}
+
+[name = box_color]
+{
+    
+    display: block;
 }
 
 #controls

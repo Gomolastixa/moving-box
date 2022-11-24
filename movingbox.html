@@ -7,21 +7,40 @@
     <body>
         <div id="container">
             <div id="controls">
-                <button type="button" onclick="moveBoxLeft()">&larr;</button>
-                <button type="button" onclick="moveBoxUp()">&uarr;</button>
-                <button type="button" onclick="moveBoxDown()">&darr;</button>
-                <button type="button" onclick="moveBoxRight()">&rarr;</button>
+                <button type="button" class="control" onclick="moveBoxLeft()">&larr;</button>
+                <button type="button" class="control" onclick="moveBoxUp()">&uarr;</button>
+                <button type="button" class="control" onclick="moveBoxDown()">&darr;</button>
+                <button type="button" class="control" onclick="moveBoxRight()">&rarr;</button>
 
-                <select name="colours" id="colors">
-                 
+                <button type="button" class="control" onclick="largerBox()"> Larger </button>
+                <button type="button" class="control" onclick="smallerBox()"> Smaller</button>
+
+ 
+                <select name="colors" class="control" id="colors">
+                    <option value="red" onclick="changeBoxColor(this)"> Red </option>
+                    <option value="blue" onclick="changeBoxColor(this)"> Blue </option>
+                    <option value="Green" onclick="changeBoxColor(this)"> Green </option>
+                    <option value="yellow" onclick="changeBoxColor(this)"> Yellow </option>
+                    <option value="orange" onclick="changeBoxColor(this)"> Orange </option>
+                    <option value="brown" onclick="changeBoxColor(this)"> Brown </option>
                 </select>
 
-                <input type="radio" name="box_color" value="">
-               
+                <button type="reset" class="control" onclick="resetBox()"> Reset </button>
 
-
-                <!--radio buttons : border color-->
+            
             </div>
+
+            <input type="radio" name="box_color" value="darkRed" id="dred">
+                <label for="dred"> Dark Red</label>
+                <input type="radio" name="box_color" value="darkGreen" id="dgreen">
+                <label for="dgreen"> Dark Green </label>
+                <input type="radio" name="box_color" value="darkGoldenRod" id="dgrod">
+                <label for="dgrod"> Dark Golden Rod</label>
+                <input type="radio" name="box_color" value="darkOrchid" id="dorchid">
+                <label for="dorchid"> Dark Orchid</label>
+                <br>
+                <button type="button" onclick="changeBackgroundColor()"> Change </button>
+
             <div id="box">
 
             </div>

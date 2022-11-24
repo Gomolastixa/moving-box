@@ -27,17 +27,28 @@ const css_color_names = [
     "Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"
   ];
 
+  const radio_buttons = document.querySelectorAll('input[name=box_color]') ;
+
+  var box_side = 110 ;
   var box_left = 343 ;
   var box_top = 280 ;
+  
 
-  for ( i in css_color_names)
+  function changeBoxColor(element)
   {
-    document.getElementById(colors).innerHTML += "<option value=\"css_color_names[i]\" onclick=\"changeBackgroundColor(this.id)\">" + css_color_names[i] + "</option>" ;
+    document.getElementById('box').style.background = element.value ;
   }
 
   function changeBackgroundColor()
   {
-
+    for (const radio_button of radio_buttons)
+    {
+      if (radio_button.checked) // == true ειναι περιττο
+      {
+        document.getElementById('container').style.background = radio_button.value ;
+        break ;
+      }
+    }
   }
 
   function moveBoxUp()
@@ -62,4 +73,29 @@ const css_color_names = [
   {
     box_left += 4;
     document.getElementById("box").style.left = box_left + "px" ;
+  }
+
+  function largerBox()
+  {
+    box_side += 4 ;
+    document.getElementById('box').style.width = box_side + "px" ;
+    document.getElementById('box').style.height = box_side + "px" ;
+  }
+
+  function smallerBox()
+  {
+    box_side -= 4 ;
+    document.getElementById('box').style.width = box_side + "px" ;
+    document.getElementById('box').style.height = box_side + "px" ;
+  }
+
+  function resetBox()
+  {
+    box_side = 110 ;
+    document.getElementById('box').style.width = box_side + 'px' ;
+    document.getElementById('box').style.height = box_side + 'px' ;
+    document.getElementById('box').style.top = 280 + "px" ;
+    document.getElementById('box').style.left = 343 + "px" ;
+    document.getElementById('box').style.background = "antiquewhite" ;
+    document.getElementById('container').style.background = "darkcyan" ;
   }
