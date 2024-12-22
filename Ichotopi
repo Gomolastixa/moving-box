@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon!</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            margin: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coming Soon!</h1>
+    <img src="ichotopi.jpg" alt="Coming Soon Image">
+    <div class="links">
+        <a href="https://www.facebook.com/ichotopi">Link 1</a>
+        <a href="https://www.instagram.com/ichotopi">Link 2</a>
+    </div>
+</body>
+</html>
